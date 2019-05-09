@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="changes.css">
+    <title>App congreso</title>
+</head>
+
+<body>
+
+    <div class="my-3 container-fluid col-11">
+        <div class="row">
+
+            <div class="col-12 row">
+                <div class="color-one col-sm-12 col-md-6 border">
+                    <form novalidate>
+                        <h5>Crea un taller</h5>
+                        <div class="form-group">
+                            <label for="wsName">Nombre del taller</label>
+                            <input type="text" id="wsName" class="form-control">
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="startDate">Fecha de inicio</label>
+                                <input type="date" id="startDate" class="form-control">
+                            </div>
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="endDate">Fecha de finalización</label>
+                                <input type="date" id="endDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="places">Lugares</label>
+                                <input type="number" id="places" class="form-control">
+                            </div>
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="time">Horas de trabajo</label>
+                                <input type="text" id="time" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group offset-md-6 col-sm-12 col-md-6">
+                                <button type="button" class="btn btn-success form-control" id="createWSButton">
+                                    <h6>Crear</h6>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <table class="my-2 table tabl table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Inicio</th>
+                                <th>Finalización</th>
+                                <th>Lugares</th>
+                                <th>Horas</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="workshopsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="my-3 col-12 row">
+                <div class="color-one col-sm-12 col-md-6 border">
+                    <form novalidate>
+                        <h5>Inscribete</h5>
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="memberName">Nombre</label>
+                                <input type="text" id="memberName" class="form-control">
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="email">E-mail</label>
+                                <input type="text" id="email" class="form-control">
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="birthdate">Fecha de nacimiento</label>
+                                <input type="date" id="birthdate" class="form-control">
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-6">
+                                <label for="workshopsSelect">Taller</label>
+                                <select class="form-control" id="workshopsSelect">
+                                    <option selected>-----------------------</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-6">
+                                <button type="button" class="btn btn-warning form-control" id="addMemberButton">
+                                    <h6>Registro</h6>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+
+                    <div class="row">
+                        <div class="form-group col-9">
+                            <label for="showWS">Talleres:</label>
+                            <select class="form-control" id="showWorkshopSelect">
+                                <option selected>----------------------</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label>Lugares</label>
+                            <h5 class="my-2" id="avaliable-Places"></h5>
+                        </div>
+                    </div>
+
+                    <table class="my-2 table table-bordered table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>E-mail</th>
+                                <th>Nacimiento</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="membersTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="js/main.js" type="module"></script>
+
+</html>
