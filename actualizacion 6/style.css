@@ -1,0 +1,35 @@
+body{
+    height: 1000px;
+    background-color: rgb(67, 245, 245);
+}
+
+.jumbotron{
+    background-color: rgb(47, 179, 255);
+}
+
+form{
+    margin: 5px;
+}
+
+th{
+    text-align: center;
+    background-color: rgb(15, 144, 250)
+}
+
+tr{
+    text-align: center;
+}
+
+.second-head{
+    background-color: rgb(21, 228, 255);
+}
+
+.btnAdd{
+    background: #eaa4ff;
+    border-radius: 15px;
+    width: 200px;
+}
+
+tableMembers{
+    border-radius: 9px;
+}

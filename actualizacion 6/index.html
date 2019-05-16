@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>El congreso</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4">App congreso</h1>
+            <p class="lead">Crea tu propio curso</p>
+        </div>
+        <div class="row col-10">
+
+
+
+            <div class="col-5">
+                <form id="form" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="IDcourse">ID del curso:</label>
+                        <input id="IDcourse" class="form-control" type="number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseName">Nombre del curso:</label>
+                        <input id="courseName" class="form-control" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Fecha de inicio:</label>
+                        <input id="startDate" class="form-control" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="finishDate">Fecha de término:</label>
+                        <input id="finishDate" class="form-control" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="spaceAvailable">Lugares disponibles:</label>
+                        <input id="spaceAvailable" class="form-control" type="number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duración (horas):</label>
+                        <input id="duration" class="form-control" type="number" required>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button id="btnAdd" class="btn btn-primary" type="button">Agregar</button>
+                    </div>
+                    <div> 
+                    </div>
+                </form>
+            </div>
+
+
+
+            <div class="col-3">
+                <table id="tableCourses" class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th colspan="10">Talleres</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="second-head">ID</td>
+                            <td class="second-head">Taller</td>
+                            <td class="second-head">Fecha de inicio</td>
+                            <td class="second-head">Fecha de término</td>
+                            <td class="second-head">Cantidad de lugares</td>
+                            <td class="second-head">Participantes registrados</td>
+                            <td class="second-head">Duración (horas)</td>
+                            <td class="second-head" colspan="3">Opciones</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="row col-4">
+            <table id="tableMembers" class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th colspan="10">Integrantes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="second-head">Nombre</td>
+                        <td class="second-head">Correo electrónico</td>
+                        <td class="second-head">Fecha de nacimiento</td>
+                        <td class="second-head">Opciones</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="modal fade" id="dialogo1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Registro de Participantes</h4>
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                    </div>
+
+
+                    <form id="formMember">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input id="name" class="form-control" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input id="email" class="form-control" type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Fecha de nacimiento:</label>
+                            <input id="birthday" class="form-control" type="date" required>
+                        </div>
+                    </form>
+
+                    <div class="modal-footer row justify-content-center">
+                        <button id="btnRegister" type="button" class="btn btn-primary"
+                            data-dismiss="modal">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="Main.js" type="module"></script>
+</body>
+
+</html>
